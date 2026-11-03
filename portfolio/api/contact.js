@@ -116,7 +116,7 @@ module.exports = async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Portfolio Contact <contact@nickfiles.online>",
       to: ["nishant.daki@gmail.com"],
       reply_to: email,
       subject: `Portfolio enquiry from ${name}`,
