@@ -53,42 +53,32 @@
         if (modal) modal.classList.add('hidden');
       }
 
-      function handleContactSubmit(event) {
-        event.preventDefault();
-
-        const form = event.target;
-        const formPanel = document.getElementById('contact-form-panel');
+      function showContactSuccess() {
+        const modal = document.getElementById('contact-modal');
         const successMessage = document.getElementById('contact-success');
+        const formPanel = document.getElementById('contact-form-panel');
 
-        if (!formPanel || !successMessage) return;
+        if (!modal || !successMessage || !formPanel) return;
 
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: {
-            Accept: 'application/json'
-          }
-        })
-          .then(() => {
-            form.reset();
-            formPanel.classList.add('hidden');
-            successMessage.classList.remove('hidden');
+        formPanel.classList.add('hidden');
+        successMessage.classList.remove('hidden');
 
-            requestAnimationFrame(() => {
-              successMessage.classList.add('visible');
-            });
+        requestAnimationFrame(() => {
+          successMessage.classList.add('visible');
+        });
 
-            setTimeout(() => {
-              closeContactModal();
-            }, 1800);
-          })
-          .catch(() => {
-            successMessage.classList.add('hidden');
-            successMessage.classList.remove('visible');
-            formPanel.classList.remove('hidden');
-            alert('Something went wrong while sending your message. Please try again.');
-          });
+        modal.classList.remove('hidden');
       }
+
+      function checkContactSuccessParam() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('success') === '1') {
+          showContactSuccess();
+          window.history.replaceState({}, '', window.location.pathname);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', checkContactSuccessParam);
     </script>
     <style>
       html {
@@ -177,7 +167,7 @@
         </div>
 
         <div id="contact-form-panel" class="contact-panel mt-6">
-          <form action="https://formsubmit.co/nishant.daki@gmail.com" method="POST" onsubmit="handleContactSubmit(event)" class="space-y-4">
+          <form action="https://formsubmit.co/nishant.daki@gmail.com" method="POST" class="space-y-4">
             <div>
               <label for="name" class="mb-2 block text-sm font-medium text-slate-200">Your Name</label>
               <input id="name" type="text" name="name" placeholder="Your Name" required class="w-full rounded-2xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/30" />
@@ -194,6 +184,8 @@
             </div>
 
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Portfolio Contact Form Submission" />
+            <input type="hidden" name="_next" value="./?success=1" />
 
             <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.01]">
               Send Message
