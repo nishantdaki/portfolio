@@ -53,32 +53,55 @@
         if (modal) modal.classList.add('hidden');
       }
 
-      function showContactSuccess() {
-        const modal = document.getElementById('contact-modal');
-        const successMessage = document.getElementById('contact-success');
+      async function handleContactSubmit(event) {
+        event.preventDefault();
+
+        const form = event.target;
         const formPanel = document.getElementById('contact-form-panel');
+        const successMessage = document.getElementById('contact-success');
+        const submitButton = form.querySelector('button[type="submit"]');
 
-        if (!modal || !successMessage || !formPanel) return;
+        if (!formPanel || !successMessage || !submitButton) return;
 
-        formPanel.classList.add('hidden');
-        successMessage.classList.remove('hidden');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
 
-        requestAnimationFrame(() => {
-          successMessage.classList.add('visible');
-        });
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: form.name.value,
+              email: form.email.value,
+              message: form.message.value
+            })
+          });
 
-        modal.classList.remove('hidden');
-      }
+          const result = await response.json();
 
-      function checkContactSuccessParam() {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('success') === '1') {
-          showContactSuccess();
-          window.history.replaceState({}, '', window.location.pathname);
+          if (!response.ok) {
+            throw new Error(result.message || 'Failed to send message');
+          }
+
+          form.reset();
+          formPanel.classList.add('hidden');
+          successMessage.classList.remove('hidden');
+          requestAnimationFrame(() => {
+            successMessage.classList.add('visible');
+          });
+
+          setTimeout(() => {
+            closeContactModal();
+          }, 2000);
+        } catch (error) {
+          alert(error.message || 'Something went wrong while sending your message. Please try again.');
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Message';
         }
       }
-
-      document.addEventListener('DOMContentLoaded', checkContactSuccessParam);
     </script>
     <style>
       html {
@@ -167,7 +190,7 @@
         </div>
 
         <div id="contact-form-panel" class="contact-panel mt-6">
-          <form action="https://formsubmit.co/nishant.daki@gmail.com" method="POST" class="space-y-4">
+          <form id="contactForm" class="space-y-4" onsubmit="handleContactSubmit(event)">
             <div>
               <label for="name" class="mb-2 block text-sm font-medium text-slate-200">Your Name</label>
               <input id="name" type="text" name="name" placeholder="Your Name" required class="w-full rounded-2xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/30" />
@@ -182,10 +205,6 @@
               <label for="message" class="mb-2 block text-sm font-medium text-slate-200">Your Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Your Message" required class="w-full rounded-2xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/30"></textarea>
             </div>
-
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="Portfolio Contact Form Submission" />
-            <input type="hidden" name="_next" value="./?success=1" />
 
             <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.01]">
               Send Message

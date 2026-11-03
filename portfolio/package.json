@@ -1,0 +1,9 @@
+{
+  "name": "nishant-daki-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Portfolio site with Resend email form integration for Vercel",
+  "dependencies": {
+    "resend": "^4.5.0"
+  }
+}
