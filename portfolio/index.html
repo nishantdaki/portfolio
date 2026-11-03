@@ -18,10 +18,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="text-slate-100 antialiased">
-    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+
+    <header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-xl">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#top" class="flex items-center gap-3 text-lg font-semibold tracking-tight">
-          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 text-sm font-bold text-white shadow-glow">ND</span>
+        <a href="#top" class="flex items-center gap-3 text-lg font-semibold tracking-tight text-white">
+          <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-cyan-400 text-sm font-bold text-white shadow-glow">ND</span>
           <span>Nishant Daki</span>
         </a>
 
@@ -33,20 +36,8 @@
         </div>
 
         <div class="hidden items-center gap-3 md:flex">
-          <a
-            href="./assets/docs/Nishant_Daki_CV.pdf"
-            download
-            class="rounded-full border border-cyan-400/60 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:bg-cyan-500 hover:text-white"
-          >
-            Download CV
-          </a>
-          <button
-            type="button"
-            onclick="openContactModal()"
-            class="rounded-full border border-violet-400/60 bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-200 transition hover:bg-violet-500 hover:text-white"
-          >
-            Let’s talk
-          </button>
+          <a href="./assets/docs/Nishant_Daki_CV.pdf" download class="rounded-full border border-cyan-400/60 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:bg-cyan-500 hover:text-white">Download CV</a>
+          <button type="button" onclick="openContactModal()" class="rounded-full border border-violet-400/60 bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-200 transition hover:bg-violet-500 hover:text-white">Let’s talk</button>
         </div>
       </nav>
     </header>
@@ -58,9 +49,7 @@
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Contact</p>
             <h2 class="mt-2 text-3xl font-bold text-white">Let’s talk</h2>
           </div>
-          <button type="button" onclick="closeContactModal()" class="rounded-full border border-slate-600 bg-slate-800 p-2 text-slate-300 transition hover:border-slate-500 hover:text-white">
-            ✕
-          </button>
+          <button type="button" onclick="closeContactModal()" class="rounded-full border border-slate-600 bg-slate-800 p-2 text-slate-300 transition hover:border-slate-500 hover:text-white">✕</button>
         </div>
 
         <div id="contact-form-panel" class="contact-panel mt-6">
@@ -80,61 +69,50 @@
               <textarea id="message" name="message" rows="5" placeholder="Your Message" required class="w-full rounded-2xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/30"></textarea>
             </div>
 
-            <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.01]">
-              Send Message
-            </button>
+            <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.01]">Send Message</button>
           </form>
         </div>
 
         <div id="contact-success" aria-live="polite" class="contact-success hidden mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 text-center">
           <p class="text-lg font-semibold text-emerald-200">Thank you for reaching out.</p>
           <p class="mt-2 text-sm text-emerald-100/80">Your message has been sent successfully. I’ll get back to you soon.</p>
-          <button type="button" onclick="closeContactModal()" class="mt-4 inline-flex items-center justify-center rounded-full border border-emerald-400/60 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:bg-emerald-500 hover:text-white">
-            Close
-          </button>
+          <button type="button" onclick="closeContactModal()" class="mt-4 inline-flex items-center justify-center rounded-full border border-emerald-400/60 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:bg-emerald-500 hover:text-white">Close</button>
         </div>
       </div>
     </div>
 
     <main id="top">
-      <section class="relative overflow-hidden">
-        <div class="grid-pattern absolute inset-0 opacity-30"></div>
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-28">
-          <div class="relative z-10">
-            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-cyan-200">
-              Senior Software Engineer
-            </div>
+      <section class="hero-section relative overflow-hidden">
+        <div class="hero-grid absolute inset-0 opacity-30"></div>
 
-            <h1 class="max-w-xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-7xl">
-              I build <span class="bg-gradient-to-r from-violet-400 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">scalable data-driven solutions</span> for real business impact.
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-28">
+          <div class="relative z-10">
+            <div class="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.24em] text-cyan-200">Senior Software Engineer</div>
+
+            <h1 class="reveal max-w-xl text-4xl font-black tracking-[-0.06em] text-white sm:text-5xl lg:text-7xl">
+              I build <span class="bg-gradient-to-r from-violet-400 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">scalable digital products</span> that work beautifully in the real world.
             </h1>
 
-            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
-              Accomplished Senior Software Engineer at Fractal Analytics with strong experience in Python, backend systems, analytics platforms, and cross-functional delivery. I lead teams, improve processing efficiency, and drive practical engineering solutions from concept to production.
+            <p class="reveal mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              Accomplished Senior Software Engineer at Fractal Analytics with experience designing and delivering data-rich platforms, automation workflows, and business-facing software across engineering and analytics teams.
             </p>
 
-            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#projects" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02]">
-                View Projects
-              </a>
-              <a href="./assets/docs/Nishant_Daki_CV.pdf" download class="inline-flex items-center justify-center rounded-full border border-cyan-400/60 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500 hover:text-white">
-                Download CV
-              </a>
-              <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800">
-                Contact Me
-              </button>
+            <div class="reveal mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#projects" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02]">View Projects</a>
+              <a href="./assets/docs/Nishant_Daki_CV.pdf" download class="inline-flex items-center justify-center rounded-full border border-cyan-400/60 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500 hover:text-white">Download CV</a>
+              <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800">Contact Me</button>
             </div>
 
-            <div class="mt-10 flex flex-wrap gap-6 text-sm text-slate-300">
-              <div>
+            <div class="reveal mt-10 flex flex-wrap gap-6 text-sm text-slate-300">
+              <div class="stat-block">
                 <div class="text-2xl font-bold text-white">8+</div>
                 <div>Years building</div>
               </div>
-              <div>
+              <div class="stat-block">
                 <div class="text-2xl font-bold text-white">10+</div>
                 <div>Products delivered</div>
               </div>
-              <div>
+              <div class="stat-block">
                 <div class="text-2xl font-bold text-white">5+</div>
                 <div>Years at Fractal</div>
               </div>
@@ -142,10 +120,11 @@
           </div>
 
           <div class="relative z-10 flex justify-center lg:justify-end">
-            <div class="relative mx-auto w-full max-w-md">
-              <div class="absolute -inset-6 rounded-[2.25rem] bg-gradient-to-r from-violet-500/20 via-cyan-500/15 to-fuchsia-500/20 blur-3xl"></div>
+            <div class="hero-visual reveal relative mx-auto w-full max-w-md">
+              <div class="orb orb-one"></div>
+              <div class="orb orb-two"></div>
 
-              <div class="glass relative overflow-hidden rounded-[2rem] p-6 shadow-[0_30px_80px_rgba(15,23,42,0.7)] ring-1 ring-white/5">
+              <div class="glass hero-card relative overflow-hidden rounded-[2rem] p-6 shadow-[0_30px_90px_rgba(15,23,42,0.8)] ring-1 ring-white/5">
                 <div class="flex items-center justify-between border-b border-slate-700 pb-4">
                   <div class="flex gap-2">
                     <span class="h-3 w-3 rounded-full bg-rose-400"></span>
@@ -158,13 +137,9 @@
                 <div class="mt-7 flex justify-center">
                   <div class="relative">
                     <div class="absolute inset-[-18px] rounded-full bg-gradient-to-r from-violet-500/30 via-cyan-400/20 to-fuchsia-500/30 blur-2xl"></div>
-                    <div class="absolute inset-[-8px] rounded-full border border-gradient-to-r from-violet-400/70 via-cyan-400/70 to-fuchsia-400/70"></div>
+                    <div class="absolute inset-[-8px] rounded-full border border-violet-400/60"></div>
                     <div class="relative rounded-full border border-violet-400/40 bg-slate-900 p-2 shadow-[0_0_40px_rgba(124,58,237,0.25)]">
-                      <img
-                        src="./assets/images/profile.png"
-                        alt="Nishant Daki profile"
-                        class="h-64 w-64 rounded-full object-cover object-center"
-                      />
+                      <img src="./assets/images/profile.png" alt="Nishant Daki profile" class="h-64 w-64 rounded-full object-cover object-center" />
                     </div>
                     <span class="absolute -bottom-2 right-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-200">
                       <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -211,7 +186,7 @@
       </section>
 
       <section id="about" class="mx-auto max-w-6xl px-6 py-8 lg:px-8">
-        <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 md:p-10">
+        <div class="reveal rounded-[2rem] border border-slate-800/80 bg-slate-900/60 p-8 md:p-10">
           <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">About</p>
@@ -225,7 +200,7 @@
       </section>
 
       <section id="skills" class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-        <div class="mb-10 flex items-end justify-between gap-4">
+        <div class="reveal mb-10 flex items-end justify-between gap-4">
           <div>
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Skills</p>
             <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Skills, tools, and certifications relevant to my engineering work.</h2>
@@ -233,7 +208,7 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-violet-500/50">
+          <div class="reveal skill-card rounded-[1.75rem] border border-slate-800 bg-slate-900/70 p-6">
             <div class="mb-6 inline-flex rounded-xl bg-violet-500/15 p-3 text-violet-200">⚡</div>
             <h3 class="text-xl font-semibold text-white">Languages</h3>
             <ul class="mt-4 space-y-2 text-slate-300">
@@ -243,7 +218,7 @@
             </ul>
           </div>
 
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-cyan-500/50">
+          <div class="reveal skill-card rounded-[1.75rem] border border-slate-800 bg-slate-900/70 p-6">
             <div class="mb-6 inline-flex rounded-xl bg-cyan-500/15 p-3 text-cyan-200">🧠</div>
             <h3 class="text-xl font-semibold text-white">Frameworks</h3>
             <ul class="mt-4 space-y-2 text-slate-300">
@@ -253,7 +228,7 @@
             </ul>
           </div>
 
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-emerald-500/50">
+          <div class="reveal skill-card rounded-[1.75rem] border border-slate-800 bg-slate-900/70 p-6">
             <div class="mb-6 inline-flex rounded-xl bg-emerald-500/15 p-3 text-emerald-200">🛠️</div>
             <h3 class="text-xl font-semibold text-white">Databases & Cloud</h3>
             <ul class="mt-4 space-y-2 text-slate-300">
@@ -263,7 +238,7 @@
             </ul>
           </div>
 
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-amber-500/50">
+          <div class="reveal skill-card rounded-[1.75rem] border border-slate-800 bg-slate-900/70 p-6">
             <div class="mb-6 inline-flex rounded-xl bg-amber-500/15 p-3 text-amber-200">📈</div>
             <h3 class="text-xl font-semibold text-white">DevOps & Certs</h3>
             <ul class="mt-4 space-y-2 text-slate-300">
@@ -276,14 +251,14 @@
       </section>
 
       <section class="mx-auto max-w-6xl px-6 py-8 lg:px-8">
-        <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 md:p-10">
+        <div class="reveal rounded-[2rem] border border-slate-800 bg-slate-900/60 p-8 md:p-10">
           <div class="mb-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Experience</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Career timeline</h2>
           </div>
 
           <div class="space-y-8">
-            <div class="border-l border-violet-500/40 pl-6">
+            <div class="timeline-item border-l border-violet-500/40 pl-6">
               <p class="text-sm uppercase tracking-[0.2em] text-cyan-300">Fractal Analytics</p>
               <h3 class="mt-2 text-2xl font-semibold text-white">Senior Software Engineer</h3>
               <p class="mt-1 text-sm text-slate-400">July 2022 — Present</p>
@@ -294,7 +269,7 @@
               </ul>
             </div>
 
-            <div class="border-l border-violet-500/40 pl-6">
+            <div class="timeline-item border-l border-violet-500/40 pl-6">
               <p class="text-sm uppercase tracking-[0.2em] text-cyan-300">Meditab Software Pvt. Ltd.</p>
               <h3 class="mt-2 text-2xl font-semibold text-white">Backend Developer</h3>
               <p class="mt-1 text-sm text-slate-400">Dec 2018 — Jun 2022</p>
@@ -304,7 +279,7 @@
               </ul>
             </div>
 
-            <div class="border-l border-violet-500/40 pl-6">
+            <div class="timeline-item border-l border-violet-500/40 pl-6">
               <p class="text-sm uppercase tracking-[0.2em] text-cyan-300">Cybage Software</p>
               <h3 class="mt-2 text-2xl font-semibold text-white">Web Developer</h3>
               <p class="mt-1 text-sm text-slate-400">May 2017 — Nov 2018</p>
@@ -318,7 +293,7 @@
       </section>
 
       <section id="projects" class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-        <div class="mb-10 flex items-end justify-between gap-4">
+        <div class="reveal mb-10 flex items-end justify-between gap-4">
           <div>
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Projects</p>
             <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Projects and solutions from my professional experience.</h2>
@@ -326,7 +301,7 @@
         </div>
 
         <div class="grid gap-8 lg:grid-cols-3">
-          <article class="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 transition hover:-translate-y-2 hover:border-violet-500/50">
+          <article class="project-card reveal group overflow-hidden rounded-[1.8rem] border border-slate-800 bg-slate-900/70">
             <div class="h-52 bg-gradient-to-br from-violet-600 via-fuchsia-500 to-cyan-500 p-6">
               <div class="flex h-full items-end justify-between">
                 <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">P&G</span>
@@ -335,9 +310,7 @@
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-semibold text-white">Optilane Webapp</h3>
-              <p class="mt-4 text-slate-300">
-                Python-React solution for simulating transport facility pipelines, with configurable parameters and an admin user access dashboard for managing operational controls.
-              </p>
+              <p class="mt-4 text-slate-300">Python-React solution for simulating transport facility pipelines, with configurable parameters and an admin user access dashboard for managing operational controls.</p>
               <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
                 <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Python</span>
                 <span class="rounded-full bg-slate-800 px-2.5 py-1.5">React</span>
@@ -346,7 +319,7 @@
             </div>
           </article>
 
-          <article class="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 transition hover:-translate-y-2 hover:border-cyan-500/50">
+          <article class="project-card reveal group overflow-hidden rounded-[1.8rem] border border-slate-800 bg-slate-900/70">
             <div class="h-52 bg-gradient-to-br from-cyan-500 via-sky-500 to-indigo-500 p-6">
               <div class="flex h-full items-end justify-between">
                 <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">Fractal</span>
@@ -355,9 +328,7 @@
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-semibold text-white">DRC Dashboards & DEM</h3>
-              <p class="mt-4 text-slate-300">
-                Developed graphical dashboards across multiple billing cycles and procedures, along with end-to-end deployment of newsletters and daily SLA reporting workflows.
-              </p>
+              <p class="mt-4 text-slate-300">Developed graphical dashboards across multiple billing cycles and procedures, along with end-to-end deployment of newsletters and daily SLA reporting workflows.</p>
               <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
                 <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Dashboards</span>
                 <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Reporting</span>
@@ -366,7 +337,7 @@
             </div>
           </article>
 
-          <article class="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 transition hover:-translate-y-2 hover:border-emerald-500/50">
+          <article class="project-card reveal group overflow-hidden rounded-[1.8rem] border border-slate-800 bg-slate-900/70">
             <div class="h-52 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 p-6">
               <div class="flex h-full items-end justify-between">
                 <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">Philips</span>
@@ -375,9 +346,7 @@
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-semibold text-white">Pulse Chatbot</h3>
-              <p class="mt-4 text-slate-300">
-                Intelligent chatbot built to streamline material organization, fulfill orders efficiently, manage shortages, and notify teams about rescued orders through scheduled notifications.
-              </p>
+              <p class="mt-4 text-slate-300">Intelligent chatbot built to streamline material organization, fulfill orders efficiently, manage shortages, and notify teams about rescued orders through scheduled notifications.</p>
               <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
                 <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Chatbot</span>
                 <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Automation</span>
@@ -390,13 +359,13 @@
 
       <section class="mx-auto max-w-6xl px-6 pb-20 lg:px-8">
         <div class="grid gap-8 lg:grid-cols-2">
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8">
+          <div class="reveal rounded-[2rem] border border-slate-800 bg-slate-900/60 p-8">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Education</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Bachelor of Information Technology - Software Engineering</h2>
             <p class="mt-4 text-lg text-slate-300">L.D. College of Engineering</p>
           </div>
 
-          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8">
+          <div class="reveal rounded-[2rem] border border-slate-800 bg-slate-900/60 p-8">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Certifications</p>
             <h2 class="mt-3 text-3xl font-bold text-white">Fractal Certified SQL Developer Professional</h2>
             <p class="mt-4 text-lg text-slate-300">Strong focus on structured data, analytics, and efficient query design.</p>

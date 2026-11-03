@@ -90,3 +90,63 @@ async function handleContactSubmit(event) {
     submitButton.textContent = 'Send Message';
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const revealItems = document.querySelectorAll('.reveal');
+
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    revealItems.forEach((item) => {
+      gsap.fromTo(item, {
+        opacity: 0,
+        y: 28
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 85%'
+        }
+      });
+    });
+
+    gsap.to('.orb-one', {
+      y: -20,
+      duration: 5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+
+    gsap.to('.orb-two', {
+      y: 18,
+      duration: 6,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+  } else {
+    revealItems.forEach((item) => {
+      item.style.opacity = '1';
+      item.style.transform = 'none';
+    });
+  }
+
+  document.querySelectorAll('.project-card').forEach((card) => {
+    card.addEventListener('mousemove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const rotateY = ((x / rect.width) - 0.5) * 10;
+      const rotateX = (0.5 - (y / rect.height)) * 10;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+});
