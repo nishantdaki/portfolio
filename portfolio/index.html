@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nishant Daki | Senior Software Engineer</title>
+    <meta
+      name="description"
+      content="Senior Software Engineer portfolio showcasing experience, projects, skills, and professional background."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              night: '#020817',
+              panel: '#0f172a',
+              accent: '#7c3aed',
+              mint: '#34d399',
+              sky: '#38bdf8'
+            },
+            boxShadow: {
+              glow: '0 0 30px rgba(124, 58, 237, 0.35)'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(124, 58, 237, 0.18), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.12), transparent 25%),
+          #020817;
+      }
+
+      .glass {
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+      }
+
+      .grid-pattern {
+        background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+    </style>
+  </head>
+  <body class="text-slate-100 antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#top" class="flex items-center gap-3 text-lg font-semibold tracking-tight">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 text-sm font-bold text-white shadow-glow">ND</span>
+          <span>Nishant Daki</span>
+        </a>
+
+        <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <a href="#about" class="transition hover:text-white">About</a>
+          <a href="#skills" class="transition hover:text-white">Skills</a>
+          <a href="#projects" class="transition hover:text-white">Projects</a>
+          <a href="#contact" class="transition hover:text-white">Contact</a>
+        </div>
+
+        <div class="hidden items-center gap-3 md:flex">
+          <a
+            href="./Nishant_Daki_CV.pdf"
+            download
+            class="rounded-full border border-cyan-400/60 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:bg-cyan-500 hover:text-white"
+          >
+            Download CV
+          </a>
+          <a
+            href="#contact"
+            class="rounded-full border border-violet-400/60 bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-200 transition hover:bg-violet-500 hover:text-white"
+          >
+            Let’s talk
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="relative overflow-hidden">
+        <div class="grid-pattern absolute inset-0 opacity-30"></div>
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-28">
+          <div class="relative z-10">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-cyan-200">
+              Senior Software Engineer
+            </div>
+
+            <h1 class="max-w-xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-7xl">
+              I build <span class="bg-gradient-to-r from-violet-400 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">scalable data-driven solutions</span> for real business impact.
+            </h1>
+
+            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              Accomplished Senior Software Engineer at Fractal Analytics with strong experience in Python, backend systems, analytics platforms, and cross-functional delivery. I lead teams, improve processing efficiency, and drive practical engineering solutions from concept to production.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#projects" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02]">
+                View Projects
+              </a>
+              <a href="./Nishant_Daki_CV.pdf" download class="inline-flex items-center justify-center rounded-full border border-cyan-400/60 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500 hover:text-white">
+                Download CV
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800">
+                Contact Me
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-6 text-sm text-slate-300">
+              <div>
+                <div class="text-2xl font-bold text-white">8+</div>
+                <div>Years building</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white">10+</div>
+                <div>Products delivered</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white">5+</div>
+                <div>Years at Fractal</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <div class="glass relative overflow-hidden rounded-3xl p-6 shadow-2xl shadow-violet-950/40">
+              <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+                <div class="flex gap-2">
+                  <span class="h-3 w-3 rounded-full bg-rose-400"></span>
+                  <span class="h-3 w-3 rounded-full bg-amber-400"></span>
+                  <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+                </div>
+                <span class="rounded-full border border-slate-600 bg-slate-800 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-slate-300">Portfolio</span>
+              </div>
+
+              <div class="mt-6 rounded-2xl bg-slate-950/80 p-5 ring-1 ring-slate-800">
+                <div class="mb-4 flex items-center justify-between text-sm text-slate-400">
+                  <span>projects/optilane</span>
+                  <span>Python + React</span>
+                </div>
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3">
+                    <span class="h-2.5 w-2.5 rounded-full bg-violet-400"></span>
+                    <span class="text-slate-200">Pipeline simulation platform</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="h-2.5 w-2.5 rounded-full bg-cyan-400"></span>
+                    <span class="text-slate-200">Admin access dashboard</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                    <span class="text-slate-200">Billing cycle analytics</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-violet-500/20 bg-violet-500/10 p-4">
+                  <div class="text-xs uppercase tracking-[0.2em] text-violet-200">Focus</div>
+                  <div class="mt-2 text-2xl font-bold text-white">Data + Product</div>
+                </div>
+                <div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-4">
+                  <div class="text-xs uppercase tracking-[0.2em] text-cyan-200">Stack</div>
+                  <div class="mt-2 text-2xl font-bold text-white">Python + React</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-6xl px-6 py-8 lg:px-8">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 md:p-10">
+          <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">About</p>
+              <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Driving analytics and application delivery across teams and systems.</h2>
+            </div>
+            <p class="text-lg leading-8 text-slate-300">
+              I work across the full system development lifecycle, from requirement gathering and architecture to implementation and deployment, ensuring that business needs translate into scalable, production-ready solutions for data and product workflows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Skills</p>
+            <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Skills, tools, and certifications relevant to my engineering work.</h2>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-violet-500/50">
+            <div class="mb-6 inline-flex rounded-xl bg-violet-500/15 p-3 text-violet-200">⚡</div>
+            <h3 class="text-xl font-semibold text-white">Languages</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li>• Python</li>
+              <li>• JavaScript</li>
+              <li>• HTML5</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-cyan-500/50">
+            <div class="mb-6 inline-flex rounded-xl bg-cyan-500/15 p-3 text-cyan-200">🧠</div>
+            <h3 class="text-xl font-semibold text-white">Frameworks</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li>• React</li>
+              <li>• FastAPI</li>
+              <li>• Django</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-emerald-500/50">
+            <div class="mb-6 inline-flex rounded-xl bg-emerald-500/15 p-3 text-emerald-200">🛠️</div>
+            <h3 class="text-xl font-semibold text-white">Databases & Cloud</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li>• PostgreSQL</li>
+              <li>• BigQuery</li>
+              <li>• MySQL / SQLite</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-amber-500/50">
+            <div class="mb-6 inline-flex rounded-xl bg-amber-500/15 p-3 text-amber-200">📈</div>
+            <h3 class="text-xl font-semibold text-white">DevOps & Certs</h3>
+            <ul class="mt-4 space-y-2 text-slate-300">
+              <li>• Docker</li>
+              <li>• GitHub Actions</li>
+              <li>• Azure / GCP</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-8 lg:px-8">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 md:p-10">
+          <div class="mb-6">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Experience</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Career timeline</h2>
+          </div>
+
+          <div class="space-y-8">
+            <div class="border-l border-violet-500/40 pl-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-cyan-300">Fractal Analytics</p>
+              <h3 class="mt-2 text-2xl font-semibold text-white">Senior Software Engineer</h3>
+              <p class="mt-1 text-sm text-slate-400">July 2022 — Present</p>
+              <ul class="mt-4 space-y-2 text-slate-300">
+                <li>• Led cross-functional teams in software development and integration to meet project milestones.</li>
+                <li>• Developed scalable software solutions for data analytics projects, enhancing processing efficiency.</li>
+                <li>• Collaborated with data scientists to advance machine learning models and improve accuracy.</li>
+              </ul>
+            </div>
+
+            <div class="border-l border-violet-500/40 pl-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-cyan-300">Meditab Software Pvt. Ltd.</p>
+              <h3 class="mt-2 text-2xl font-semibold text-white">Backend Developer</h3>
+              <p class="mt-1 text-sm text-slate-400">Dec 2018 — Jun 2022</p>
+              <ul class="mt-4 space-y-2 text-slate-300">
+                <li>• Collaborated across all stages of the software development lifecycle to ensure smooth transitions from requirements to production.</li>
+                <li>• Worked with business analysts, developers, and technical support to determine optimal specifications.</li>
+              </ul>
+            </div>
+
+            <div class="border-l border-violet-500/40 pl-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-cyan-300">Cybage Software</p>
+              <h3 class="mt-2 text-2xl font-semibold text-white">Web Developer</h3>
+              <p class="mt-1 text-sm text-slate-400">May 2017 — Nov 2018</p>
+              <ul class="mt-4 space-y-2 text-slate-300">
+                <li>• Built and maintained client websites through online platforms.</li>
+                <li>• Assisted with troubleshooting software and supporting production issues.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+        <div class="mb-10 flex items-end justify-between gap-4">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Projects</p>
+            <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">Projects and solutions from my professional experience.</h2>
+          </div>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-3">
+          <article class="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 transition hover:-translate-y-2 hover:border-violet-500/50">
+            <div class="h-52 bg-gradient-to-br from-violet-600 via-fuchsia-500 to-cyan-500 p-6">
+              <div class="flex h-full items-end justify-between">
+                <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">P&G</span>
+                <span class="text-3xl text-white/90">↗</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-white">Optilane Webapp</h3>
+              <p class="mt-4 text-slate-300">
+                Python-React solution for simulating transport facility pipelines, with configurable parameters and an admin user access dashboard for managing operational controls.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Python</span>
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">React</span>
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Admin UI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 transition hover:-translate-y-2 hover:border-cyan-500/50">
+            <div class="h-52 bg-gradient-to-br from-cyan-500 via-sky-500 to-indigo-500 p-6">
+              <div class="flex h-full items-end justify-between">
+                <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">Fractal</span>
+                <span class="text-3xl text-white/90">↗</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-white">DRC Dashboards & DEM</h3>
+              <p class="mt-4 text-slate-300">
+                Developed graphical dashboards across multiple billing cycles and procedures, along with end-to-end deployment of newsletters and daily SLA reporting workflows.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Dashboards</span>
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Reporting</span>
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Automation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70 transition hover:-translate-y-2 hover:border-emerald-500/50">
+            <div class="h-52 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 p-6">
+              <div class="flex h-full items-end justify-between">
+                <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">Philips</span>
+                <span class="text-3xl text-white/90">↗</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-white">Pulse Chatbot</h3>
+              <p class="mt-4 text-slate-300">
+                Intelligent chatbot built to streamline material organization, fulfill orders efficiently, manage shortages, and notify teams about rescued orders through scheduled notifications.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-slate-200">
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Chatbot</span>
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Automation</span>
+                <span class="rounded-full bg-slate-800 px-2.5 py-1.5">Operations</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 pb-20 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Education</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Bachelor of Information Technology - Software Engineering</h2>
+            <p class="mt-4 text-lg text-slate-300">L.D. College of Engineering</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/60 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Certifications</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Fractal Certified SQL Developer Professional</h2>
+            <p class="mt-4 text-lg text-slate-300">Strong focus on structured data, analytics, and efficient query design.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="border-t border-slate-800 bg-slate-950/80">
+      <div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-300">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold text-white">Let’s build something meaningful.</h2>
+        </div>
+
+        <div class="flex flex-col gap-4 text-slate-300 sm:flex-row sm:items-center">
+          <a href="mailto:nishantdaki@gmail.com" class="text-lg font-medium text-white transition hover:text-violet-300">nishant.daki@gmail.com</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="rounded-full border border-slate-700 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-violet-400 hover:text-violet-300">LinkedIn</a>
+          <a href="https://github.com" target="_blank" rel="noreferrer" class="rounded-full border border-slate-700 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
